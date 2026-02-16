@@ -40,3 +40,5 @@ This Unity project can run as a frontend-only WebGL game and be hosted on Netlif
 Save data is persisted in browser storage through Unity `PlayerPrefs` for WebGL builds.
 
 See [WEBGL_NETLIFY_DEPLOY.md](WEBGL_NETLIFY_DEPLOY.md) for a step-by-step beginner guide.
+
+For a step-by-step first playable setup in Unity, see [SETUP_AND_FIRST_PLAYTEST.md](SETUP_AND_FIRST_PLAYTEST.md).
