@@ -32,3 +32,11 @@ To play or contribute to this project:
 ```bash
 git clone https://github.com/your-username/Wings-of-Peace.git
 cd Wings-of-Peace
+```
+
+## Web Deployment (Netlify + Browser Saves)
+
+This Unity project can run as a frontend-only WebGL game and be hosted on Netlify.
+Save data is persisted in browser storage through Unity `PlayerPrefs` for WebGL builds.
+
+See [WEBGL_NETLIFY_DEPLOY.md](WEBGL_NETLIFY_DEPLOY.md) for a step-by-step beginner guide.
