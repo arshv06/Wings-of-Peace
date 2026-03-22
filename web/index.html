@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wings of Peace - Web Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app" id="appRoot">
+    <div class="panel panel-fax">
+      <h2>FAX SYSTEM</h2>
+      <div class="fax-display-row">
+        <span id="led" class="led"></span>
+        <span id="faxDisplay">Waiting for Communication...</span>
+      </div>
+      <button id="printButton" disabled>Print</button>
+      <div id="faxPage" class="fax-page" draggable="false">
+        <h3>TOP SECRET</h3>
+        <p id="topSecretText"></p>
+      </div>
+    </div>
+
+    <div class="panel panel-map">
+      <h2>TARGET MAP</h2>
+      <div id="map" class="map">
+        <img src="../Assets/Images/Map.jpeg" alt="Map" class="map-image" />
+        <img id="crosshair" src="../Assets/Images/crosshair.png" alt="Crosshair" class="crosshair" />
+      </div>
+      <div class="controls">
+        <label>X Knob <input id="xKnob" type="range" min="0" max="9" value="0" /></label>
+        <label>Y Knob <input id="yKnob" type="range" min="0" max="9" value="0" /></label>
+        <div class="coord-readout">N <span id="xDisplay">0</span>, E <span id="yDisplay">0</span></div>
+        <div class="location-readout">
+          <strong id="locationName"></strong>
+          <span id="locationInfo"></span>
+          <span id="locationLed" class="led off"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel panel-missile">
+      <h2>MISSILE CONSOLE</h2>
+      <div class="buttons-row">
+        <button id="missile1Button">Missile 1</button>
+        <span id="missile1Led" class="led off"></span>
+        <button id="missile2Button">Missile 2</button>
+        <span id="missile2Led" class="led off"></span>
+      </div>
+      <img id="missileScreen" src="../Assets/Dashboard/MissileScreen.png" class="missile-screen" alt="Missile screen" />
+      <p id="missileDescription">Select a missile type.</p>
+      <button id="zoomButton" disabled>Zoom</button>
+      <div id="minimap" class="minimap">
+        <img id="minimapImage" src="../Assets/Images/Map.jpeg" alt="Mini map" class="map-image" />
+        <img id="miniCrosshair" src="../Assets/Images/crosshair.png" alt="Mini crosshair" class="crosshair hidden" />
+      </div>
+      <div class="controls">
+        <label>Mini X <input id="miniXKnob" type="range" min="0" max="30" value="0" /></label>
+        <label>Mini Y <input id="miniYKnob" type="range" min="0" max="30" value="0" /></label>
+        <div class="coord-readout" id="combinedCoordinates">N 0.0, E 0.0</div>
+      </div>
+    </div>
+
+    <div class="panel panel-status">
+      <h2>STATUS</h2>
+      <div class="timer" id="timerText">07:00</div>
+      <div class="story-controls">
+        <input id="decodedMessageInput" type="text" placeholder="Decoded message" />
+        <button id="submitLaunch">Submit Launch</button>
+      </div>
+      <pre id="eventLog" class="event-log"></pre>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
